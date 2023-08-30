@@ -28,6 +28,15 @@ $(function () {
         centerMode: true,
         centerPadding: '150px',
 
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    fade: true,
+                    centerMode: false,
+                }
+            }
+        ]
     })
 
     $('.main_visual .btn .prev').on('click', function () {
@@ -43,6 +52,15 @@ $(function () {
         arrows: false,
         infinite: true,
         fade: false,
+
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                }
+            }
+        ]
     })
 
     $('.main_product .btn .prev').on('click', function () {
