@@ -27,6 +27,7 @@ $(function () {
         infinite: true,
         centerMode: true,
         centerPadding: '150px',
+        autoplay: true,
 
         responsive: [
             {
@@ -52,6 +53,7 @@ $(function () {
         arrows: false,
         infinite: true,
         fade: false,
+        autoplay: true,
 
         responsive: [
             {
