@@ -422,6 +422,16 @@
     transition: all .5s;
 }
 
+@media (max-width: 768px) {
+    .header .lnb_con {
+        position: static;
+        transform: translate(0, 0);
+        
+        z-index: 999;
+        background: #fff;
+    }
+}
+
 .header .lnb_con.on {
     opacity: 1;
     visibility: visible;
@@ -953,6 +963,138 @@
     margin: 0 10px 0 0;
 }
 
+.main_review {
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    .main_review {
+        padding: 50px 0 0 0;
+    }
+}
+
+.main_review h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .main_review h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* @media (max-width: 768px) {
+    .main_review .review_box {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+} */
+
+.main_review .review_box .re_con {
+    padding: 0 10px;
+}
+
+.main_review .review_box .review {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.main_review .review_box figure{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.main_review .review_box figure img{
+    width: 100%;
+    height: 240px;
+}
+
+.main_review .review_box .txt {
+    padding: 16px;
+}
+
+.main_review .review_box .txt .star {
+    display: block;
+    margin: 0 0 6px 0;
+}
+
+.main_review .review_box .txt .star i {
+    font-size: 16px;
+    color: #1864b2;
+}
+
+.main_review .review_box .txt .cus_re {
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+    color: #222;
+}
+
+.main_review .review_box .txt ul {
+    display: flex;
+    gap: 12px;
+}
+
+.main_review .review_box .txt ul>li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #808080;
+}
+
+.main_review .review_box .bottom {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.main_review .review_box .bottom figure {
+    grid-column: 1/2;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.main_review .review_box .bottom img{
+    width: 100%;
+    height: 88px;
+    border-radius: 10px;
+}
+
+.main_review .review_box .bottom .pro {
+    grid-column: 2/4;
+}
+
+.main_review .review_box .bottom .pro>li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    height: 30px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 40px;
+    margin: 0 0 6px 0;
+}
+
+.main_review .review_box .bottom .pro>li~li {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
 .main_annu {
     padding: 100px 0 0 0;
 }
@@ -1213,18 +1355,11 @@
     }
 }
 
-.main_recipe .r_box {
-    display: flex;
-    gap: 30px;
+.main_recipe .mr_con {
+    padding: 0 10px;
 }
 
-@media (max-width: 768px) {
-    .main_recipe .r_box{
-        flex-direction: column;
-    }
-}
-
-.main_recipe .r_box .mr {
+.main_recipe .e_box .mr {
     border: 1px solid #ddd;
     border-radius: 25px;
     overflow: hidden;
@@ -1234,24 +1369,24 @@
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr{
+    .main_recipe .e_box .mr{
         border-radius: 10px;
     }
 }
 
-.main_recipe .r_box .mr img {
+.main_recipe .e_box .mr img {
     margin: 0 0 30px 0;
     width: 100%;
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr img{
+    .main_recipe .e_box .mr img{
         margin: 0 0 20px 0;
     }
 }
 
 
-.main_recipe .r_box .mr h3 {
+.main_recipe .e_box .mr h3 {
     font-size: 24px;
     font-weight: 500;
     margin: 0 0 15px 0;
@@ -1260,7 +1395,7 @@
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr h3 {
+    .main_recipe .e_box .mr h3 {
         font-size: 18px;
         margin: 0 0 10px 0;
         position: relative;
@@ -1268,7 +1403,7 @@
 }
 
 
-.main_recipe .r_box .mr p {
+.main_recipe .e_box .mr p {
     font-size: 16px;
     font-weight: 300;
     padding: 0 20px;
@@ -1277,7 +1412,7 @@
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr p {
+    .main_recipe .e_box .mr p {
         font-size: 13px;
         font-weight: 400;
         padding: 0 20px;
@@ -1286,7 +1421,7 @@
     }
 }
 
-.main_recipe .r_box .mr p::before {
+.main_recipe .e_box .mr p::before {
     content: "";
     position: absolute;
     bottom: -85%;
@@ -1298,37 +1433,37 @@
     background: #ddd;
 }
 
-.main_recipe .r_box .mr .r_bottom {
+.main_recipe .e_box .mr .r_bottom {
    display: flex;
    gap: 20px;
    position: relative;
 }
 
-.main_recipe .r_box .mr .r_bottom {
+.main_recipe .e_box .mr .r_bottom {
     padding: 20px 20px 0 20px;
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr .r_bottom {
+    .main_recipe .e_box .mr .r_bottom {
         padding: 20px;
         gap: 6px;
     }
 }
 
-.main_recipe .r_box .mr .r_bottom img {
+.main_recipe .e_box .mr .r_bottom img {
     width: 150px;
     height: 150px;
     border-radius: 25px;
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr .r_bottom a {
+    .main_recipe .e_box .mr .r_bottom a {
         width: 100px;
         height: 100px;
         object-fit: cover;
     }
 
-    .main_recipe .r_box .mr .r_bottom img {
+    .main_recipe .e_box .mr .r_bottom img {
         width: 100px;
         height: 100px;
         border-radius: 10px;
@@ -1336,37 +1471,37 @@
     }
 }
 
-.main_recipe .r_box .mr .r_bottom .txt {
+.main_recipe .e_box .mr .r_bottom .txt {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr .r_bottom .txt {
+    .main_recipe .e_box .mr .r_bottom .txt {
         gap: 4px;
     }
 }
 
-.main_recipe .r_box .mr .r_bottom .txt>li {
+.main_recipe .e_box .mr .r_bottom .txt>li {
     font-size: 15px;
     font-weight: 400;
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr .r_bottom .txt>li {
+    .main_recipe .e_box .mr .r_bottom .txt>li {
         font-size: 12px;
     }
 }
 
 
 
-.main_recipe .r_box .mr .r_bottom .txt>li~li {
+.main_recipe .e_box .mr .r_bottom .txt>li~li {
     font-size: 20px;
     font-weight: 700;
 }
 
-.main_recipe .r_box .mr .r_icon {
+.main_recipe .e_box .mr .r_icon {
     position: absolute;
     bottom: 0.5%;
     right: 8%;
@@ -1376,7 +1511,7 @@
     gap: 10px;
 }
 
-.main_recipe .r_box .mr .r_icon a{
+.main_recipe .e_box .mr .r_icon a{
     font-size: 30px;
     border: 1px solid #ddd;
     color: #808080;
@@ -1386,7 +1521,7 @@
 }
 
 @media (max-width:768px) {
-    .main_recipe .r_box .mr .r_icon a{
+    .main_recipe .e_box .mr .r_icon a{
         font-size: 20px;
         border: 1px solid #ddd;
         color: #808080;
@@ -1396,7 +1531,7 @@
     }
 }
 
-.main_recipe .r_box .mr .time {
+.main_recipe .e_box .mr .time {
     position: absolute;
     top: 50%;
     right: 10%;
@@ -1417,12 +1552,12 @@
 }
 
 @media (max-width: 768px) {
-    .main_recipe .r_box .mr .time {
+    .main_recipe .e_box .mr .time {
         top: 45%;
     }
 }
 
-.main_recipe .r_box .mr .time::before {
+.main_recipe .e_box .mr .time::before {
     content: "";
     position: absolute;
     top: -16px;
@@ -1434,7 +1569,7 @@
     background: #f72a66;
 }
 
-.main_recipe .r_box .mr .time::after {
+.main_recipe .e_box .mr .time::after {
     content: "";
     position: absolute;
     top: -16px;
@@ -1447,13 +1582,13 @@
     border-radius: 10px;
 }
 
-.main_recipe .r_box .mr .time>li:nth-child(1) {
+.main_recipe .e_box .mr .time>li:nth-child(1) {
     font-size: 20px;
     font-weight: 700;
     color: #f72a66;
 }
 
-.main_recipe .r_box .mr .time>li:nth-child(2) {
+.main_recipe .e_box .mr .time>li:nth-child(2) {
     font-size: 14px;
     font-weight: 500;
 }
@@ -1534,9 +1669,23 @@
     border-bottom: 1px solid #808080;
 }
 
+@media (max-width: 768px) {
+    .f .top {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
 .f .top ul {
     display: flex;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .f .top ul{
+        gap: 12px;
+    }
 }
 
 .f .top .customer {
@@ -1545,10 +1694,22 @@
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .f .top .customer {
+        font-size: 12px;
+    }
+}
+
 .f .top .sns {
     margin: 0 0 0 auto;
     gap: 10px;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .f .top .sns {
+        margin: 0;
+    }
 }
 
 .f .top .sns>li {
@@ -1558,13 +1719,27 @@
     background: #616161;
 }
 
+@media (max-width: 768px) {
+    .f .top .sns>li {
+        font-size: 16px;
+    }
+}
+
 .f .bottom {
     display: flex;
     padding: 30px 0 40px 0;
 }
 
+@media (max-width: 768px) {
+    .f .bottom {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
 .f .bottom .left {
-    margin: 0 auto 0 0;
+    /* margin: 0 auto 0 0; */
+    flex: 1;
 }
 
 .f .bottom .left h3 {
@@ -1593,9 +1768,43 @@
     margin: 0 0 30px 0;
 }
 
+@media (max-width: 768px) {
+    .f .bottom .left h3 {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 6px 0;
+    }
+    
+    .f .bottom .left p {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0 0 8px 0;
+    }
+    
+    .f .bottom .left ul>li {
+        font-size: 12px;
+        font-weight: 300;
+        color: #acacac;
+    }
+    
+    .f .bottom .left ul>li:first-child {
+        margin: 0 0 7px 0;
+    }
+    
+    .f .bottom .left ul>li~li {
+        margin: 0 0 16px 0;
+    }
+}
+
 .f .bottom .b_btn {
     display: flex;
     gap: 12px;
+}
+
+@media (max-width: 768px) {
+    .f .bottom .b_btn {
+        gap: 8px;
+    }
 }
 
 .f .bottom .b_btn a{
@@ -1606,11 +1815,18 @@
     padding: 10px 20px;
 }
 
+@media (max-width: 768px) {
+    .f .bottom .b_btn a{
+        font-size: 12px;
+        padding: 6px 12px;
+        border-radius: 10px;
+    }
+}
+
 .f .bottom .center {
-    margin: 0 auto 0 auto;
+    /* margin: 0 auto 0 auto; */
     position: relative;
-    width: 400px;
-    
+    flex: 1;
 }
 
 .f .bottom .center::before {
@@ -1639,6 +1855,13 @@
     margin: 0 0 35px 0;
 }
 
+@media (max-width: 768px) {
+    .f .bottom .center h3 {
+        font-size: 14px;
+        margin: 0 0 12px 0;
+    }
+}
+
 .f .bottom .center p {
     position: absolute;
     top: 0;
@@ -1649,9 +1872,34 @@
     margin: 0 0 0 auto;
 }
 
+@media (max-width: 768px) {
+    .f .bottom .center p {
+        right: 0;
+        font-size: 14px;
+    }
+}
+
 .f .bottom .center .c_s {
     display: flex;
     margin: 0 0 20px 0;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .f .bottom .center .c_s {
+        margin: 0 0 10px 0;
+    }
+
+    .f .bottom .center .c_s>li {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) {
+    .f .bottom .center .c_s {
+        justify-content: space-between;
+    }
 }
 
 .f .bottom .center .c_s>li~li {
@@ -1659,8 +1907,19 @@
     color: #808080;
 }
 
+@media (max-width: 768px) {
+    .f .bottom .center .c_s>li {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .f .bottom .center .c_s>li~li {
+        margin: 0;
+    }
+}
+
 .f .bottom .right {
-    margin: 0 0 0 50px;
+    flex: 1;
 }
 
 .f .bottom .right ul>li {
@@ -1672,6 +1931,12 @@
     margin: 0 0 7px 0;
 }
 
+@media (max-width: 768px) {
+    .f .bottom .right ul>li {
+        justify-content: flex-start;
+    }
+}
+
 .f .bottom .right .family {
     display: flex;
     justify-content: flex-end;
@@ -1679,7 +1944,12 @@
     pointer-events: none;
 
     position: relative;
+}
 
+@media (max-width: 768px) {
+    .f .bottom .right .family {
+        justify-content: flex-start;
+    }
 }
 
 .f .bottom .right .family span{
@@ -1693,6 +1963,13 @@
 
     gap: 10px;
     
+}
+
+@media (max-width: 768px) {
+    .f .bottom .right .family span {
+        font-size: 14px;
+        border-radius: 10px;
+    }
 }
 
 .f .bottom .right .family .d {

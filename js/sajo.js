@@ -40,6 +40,34 @@ $(function () {
         ]
     })
 
+    $('.review_box').slick ({
+        slidesToShow: 4,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay: true,
+                }
+            }
+        ]
+    })
+
+    $('.e_box').slick ({
+        slidesToShow: 3,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    autoplay: true,
+                }
+            }
+        ]
+    })
+
     $('.main_visual .btn .prev').on('click', function () {
         $('.v_slide').slick('slickPrev')
     })
