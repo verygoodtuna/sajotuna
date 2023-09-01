@@ -203,6 +203,7 @@
         left: 20px;
 
         font-size: 16px;
+        display: none;
     }
 
     .header .banner_b .gnb .gnb_i span {
@@ -403,6 +404,12 @@
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .header .lnb_con .box {
+        flex-direction: column;
+    }
+}
+
 
 .header .lnb_con {
     display: flex;
@@ -429,6 +436,8 @@
         
         z-index: 999;
         background: #fff;
+        flex-direction: column;
+        width: 50%;
     }
 }
 
@@ -458,6 +467,12 @@
 .header .lnb_con .left {
     display: flex;
     flex: 1;
+}
+
+@media (max-width: 768px) {
+    .header .lnb_con .left {
+        flex-direction: column;
+    }
 }
 
 .header .lnb_con .left .tuna,
@@ -490,8 +505,6 @@
 }
 
 .header .lnb_con .right {
-    width: calc(100% - 583px);
-    margin: 0 0 0 auto;
     flex: 1;
 }
 
@@ -503,6 +516,13 @@
     display: flex;
     justify-content: flex-end;
     gap: 0;
+}
+
+@media (max-width: 768px) {
+    .header .lnb_con .right .top ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .header .lnb_con .right .top ul>li {
@@ -518,6 +538,12 @@
 .header .lnb_con .right .bottom{
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .header .lnb_con .right .bottom{
+        flex-direction: column;
+    }
 }
 
 .header .lnb_con .right .bottom .b{
@@ -895,6 +921,14 @@
 
 .main_best .b_box ul {
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .main_best .b_box ul {
+        display: inline-flex;
+        white-space: nowrap;
+        gap: 3px;
+    }
 }
 
 .main_best .b_box ul>li {
